@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/convo_root"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.convo.ConvoActivity">
+
+
+
+    <RelativeLayout
+        android:id="@+id/convo_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@color/purple_500">
+
+        <ImageView
+            android:id="@+id/up_button"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:drawableTint="@color/white"
+            android:src="@drawable/ic_up_button"
+            android:onClick="backToConvoList"
+            app:tint="@color/white" />
+
+        <ImageView
+            android:id="@+id/convo_image"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_profile_pic"
+            android:layout_toEndOf="@id/up_button"/>
+
+        <TextView
+            android:id="@+id/convo_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginStart="0dp"
+            android:layout_toEndOf="@+id/convo_image"
+            android:text="User Name"
+            android:textAlignment="viewStart"
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:textColor="@color/white"/>
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/convo_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="898dp"
+        android:layout_above="@id/convo_footer"
+        android:layout_below="@id/convo_header"
+        android:background="@color/background_color"
+        android:scrollbars="vertical"
+        android:visibility="visible"
+        app:stackFromEnd="true" />
+
+    <ProgressBar
+        android:id="@+id/loading_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/convo_footer"
+        android:layout_centerInParent="true"
+        android:indeterminate="true"
+        android:visibility="gone"
+        android:layout_marginBottom="40dp"/>
+
+    <RelativeLayout
+        android:id="@+id/convo_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#5D55AC"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <EditText
+            android:id="@+id/convo_input"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_toStartOf="@id/convo_send"
+            android:background="@drawable/rounded_corner"
+            android:padding="5dp"
+            android:textColor="@color/white"
+
+            />
+
+        <Button
+            android:id="@+id/convo_send"
+            android:layout_width="53dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="7dp"
+            android:backgroundTint="#6D8BD6"
+            android:elegantTextHeight="false"
+            android:onClick="send_message"
+            android:paddingLeft="0dp"
+            android:paddingTop="0dp"
+            android:paddingRight="0dp"
+            android:paddingBottom="0dp"
+            android:text="SEND"
+            android:textAlignment="center"
+            android:textSize="10sp"
+            app:iconPadding="0dp" />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>
