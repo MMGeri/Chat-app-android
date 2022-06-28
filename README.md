@@ -1,2 +1,3 @@
+# Chat project made in Android studio + Java
 
-ha valami nem jo irjal dc-n GERI#1734
+websockets were implemented by firebase api
