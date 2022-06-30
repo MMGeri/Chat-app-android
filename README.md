@@ -7,7 +7,7 @@ Websockets were implemented by firebase api
 ### Notes:
 
 - Repository pattern for the database has not been implemented yet.
-- Instead of using FireBase cloud functions for notifying the user, I used a "Job Service" which reminds the app to recreate the observer for any changes in the Firestore database, which lets be honest is `NOT OPTIMAL`. For money reasons.
+- Instead of using FireBase cloud functions for notifying the user, I used a "Job Service" which reminds the app to recreate the observer for any changes in the Firestore database, which lets be honest is `NOT OPTIMAL`. 
 - The code isn't very "`Clean`", this is my first android app, at the time i was very proud of it. please spare me
 
 - The app requires a min android sdk of `26`
